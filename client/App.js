@@ -18,7 +18,7 @@ export default class App extends React.Component {
     console.log("button has been clicked");
     axios.get('/strings')
     .then((response) => {
-      this.setState({string: response})
+      this.setState({string: response.data})
     })
     .catch( (error) => {
       console.log(error);
